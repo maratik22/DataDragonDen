@@ -1,0 +1,10 @@
+x = int(input('Введите число: '))
+def func(y: int) -> list:
+  if y == 1:
+    return [1]
+  elif y == 2:
+    return [1,1]
+  z = func(y-1)
+  z.append(z[-1] + z[-2])
+  return z
+print(func(x))
